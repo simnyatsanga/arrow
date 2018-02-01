@@ -171,7 +171,7 @@ def get_column_metadata(column, name, arrow_type, field_name):
         )
 
     if not isinstance(field_name, six.string_types):
-        field_name = frombytes(str(field_name))
+        field_name = frombytes(field_name)
 
     return {
         'name': name,
