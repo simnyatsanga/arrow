@@ -550,7 +550,7 @@ def table_to_blockmanager(options, table, memory_pool, nthreads=1,
         for c in columns:
             column_name = c['name']
             if not isinstance(column_name, six.text_type):
-                column_name = frombytes(str(column_name))
+                column_name = frombytes(column_name)
 
             columns_name_dict[c.get('field_name', column_name)] = c['name']
 
