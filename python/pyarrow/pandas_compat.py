@@ -319,7 +319,7 @@ def dataframe_to_arrays(df, schema, preserve_index, nthreads=1):
         if not isinstance(name, six.string_types):
             name = _column_name_to_strings(name)
             if name is not None:
-                name = frombytes(str(name))
+                name = frombytes(name)
 
         if schema is not None:
             field = schema.field_by_name(name)
